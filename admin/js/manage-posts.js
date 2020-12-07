@@ -2,16 +2,15 @@ window.onload = function () {
 fetchTableData();
 }
 
-let postContainer = documnet.getElement('table-post');
-let postData = documnet.getElement('post-table-data');
+let postTableData = document.getElementById('post-table-data');
 
 async function fetchTableData() {
     try {
-        let response = await fetch('http://localhost:3000/posts');
-        let data = response.json();
-
+        let response = await fetch("http://localhost:3000/posts");
+        let data = await response.json();
         let postHTML = "";
-        for(let postData of data.reversed()) {
+
+        for(let postData of data.reverse()) {
         let postDate = new Date(postData.date);
             postHTML += `
                 <tr>
@@ -26,7 +25,7 @@ async function fetchTableData() {
                 </tr>
             `;
         }
-        postData.innerHTML = postHTML;
+        postTableData.innerHTML = postHTML;
     } catch(error) {
         throw new Error(error);
     }
