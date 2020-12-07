@@ -2,10 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog api admin</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="js/manage-posts.js"></script>
+    <h1>Admin page</h1>
+    <a href="./admin/create-post.html" id="admin-btn">Create post</a>
+    
+    <div id="container">
+        <h2>Blog posts</h2>
+        <table id="table-post">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Content</th>
+                    <th>Date</th>
+                    <th>Manage</th>
+                </tr>
+            </thead>
+            <tbody id="post-table-data">
+                
+            </tbody>
+
+        </table>
+    </div>
+    <script src="js/posts.js"></script>
 </body>
 </html>

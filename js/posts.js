@@ -1,4 +1,7 @@
 window.onload = function () {
+fetchPosts();
+}
+
 let container = document.getElementById('container');
 let posts = document.getElementById('posts');
 
@@ -10,12 +13,12 @@ async function fetchPosts() {
         for(let posts of data) {
         let postDate = new Date(posts.date);
             blogHTML += `
-                <li>
+                <div>
                     <h2>${posts.title}</h2>
-                    <p>${posts.author}Author</p>
+                    <p>Author: ${posts.author}</p>
                     <p>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</p>
-                    <p>${posts.content}Post content</p>
-                </li>
+                    <p>Post content: ${posts.content}</p>
+                </div>
             `;
         }
         posts.innerHTML = blogHTML;
@@ -23,7 +26,4 @@ async function fetchPosts() {
     } catch (error) {
         throw new Error(error);
     }
-}
-
-fetchPosts();
 }
