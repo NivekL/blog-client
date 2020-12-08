@@ -16,10 +16,10 @@ async function fetchTableData() {
                 <tr>
                     <td>${postData.title}</td>
                     <td>${postData.author}</td>
-                    <td>${postData.content}</td>
+                    <td>${postData.tags}</td>
                     <td>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</td>
                     <td>
-                        <a href="update-post.html?id=${postData['_id']}">Update</a>
+                        <a href="update-post.html?id=${postData['_id']}" class="update-post-btn">Update</a>
                         <a href="#" class="delete-post-btn" data-id="${postData['_id']}">Delete</a> 
                     </td>
                 </tr>

@@ -12,6 +12,7 @@ async function prefillForm() {
         document.getElementById('input-title').value = data.title;
         document.getElementById('input-author').value = data.author;
         document.getElementById('post-content').value = data.content;
+        document.getElementById('post-tags').value = data.tags;
 
     } catch (message) {
         throw new Error(message);
@@ -27,6 +28,7 @@ function updatePost() {
         
         let formData = new FormData(this);
         let object = {
+            tags: formData.getAll('tags'),
             title: formData.get('input-title'),
             author: formData.get('input-author'),
             content: formData.get('textarea-content')

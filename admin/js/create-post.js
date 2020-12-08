@@ -9,9 +9,9 @@ async function createPost(e) {
     console.log(formData.get('input-title'));
     console.log(formData.get('input-author'));
     console.log(formData.get('textarea-content'));
-    
 
     let object = {
+        tags: formData.getAll('tags'),
         title: formData.get("input-title"),
         author: formData.get("input-author"),
         content: formData.get("textarea-content")

@@ -1,0 +1,45 @@
+h1,h2,p,a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+.button {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 15px;
+  }
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+.blog-post-text {
+    white-space: nowrap; 
+    width: 500px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.single-post-text {
+    width: 500px;
+}
+
+body {
+    background-image: linear-gradient(to bottom right,rgb(238 112 240), rgb(95 218 231));
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container {
+   max-width: 960px;
+   margin: auto;
+}
+
+div {
+    border-bottom: 1px dashed black;
+}

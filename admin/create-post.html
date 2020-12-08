@@ -4,15 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Create Post</h1>
     <form id="create-post-form">
-        <input name="input-title" id="input-title" placeholder="Post title"></input>
-        <input name="input-author" id="input-author" placeholder="Post author"></input>
-        <textarea name="textarea-content" id="post-content" cols="30" rows="10" placeholder="Post content"></textarea>
-        <button type="submit">Submit</button>
-        <a href="index.html">Back</a>
+        <input name="input-title" id="input-title" class="form-input-content" placeholder="Post title"></input>
+        <input name="input-author" id="input-author" class="form-input-content" placeholder="Post author"></input>
+        <textarea name="textarea-content" id="post-content" class="form-input-content" cols="50" rows="10" placeholder="Post content"></textarea>
+        <select name="tags" id="post-tags" multiple>
+            <option value="History">History</option>
+            <option value="Games">Games</option>
+            <option value="Economics">Economics</option>
+            <option value="Culture">Culture</option>
+        </select>
+        <button type="submit" class="submit-btn button">Submit</button>
+        <a href="index.html" class="button">Back</a>
     </form>
     <script src="js/create-post.js"></script>
 </body>
