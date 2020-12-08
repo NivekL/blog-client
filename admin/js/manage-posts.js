@@ -15,8 +15,8 @@ async function fetchTableData() {
             postHTML += `
                 <tr>
                     <td>${postData.title}</td>
-                    <td>Author: ${postData.author}</td>
-                    <td>Post content: ${postData.content}</td>
+                    <td>${postData.author}</td>
+                    <td>${postData.content}</td>
                     <td>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</td>
                     <td>
                         <a href="update-post.html?id=${postData['_id']}">Update</a>

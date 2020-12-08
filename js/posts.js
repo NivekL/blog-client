@@ -15,9 +15,9 @@ async function fetchPosts() {
             blogHTML += `
                 <div>
                     <h2>${posts.title}</h2>
-                    <p>Author: ${posts.author}</p>
+                    <p>${posts.author}</p>
                     <p>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</p>
-                    <p>Post content: ${posts.content}</p>
+                    <p>${posts.content}</p>
                 </div>
             `;
         }
