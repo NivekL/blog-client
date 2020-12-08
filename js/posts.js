@@ -10,7 +10,7 @@ async function fetchPosts() {
         let response = await fetch("http://localhost:3000/posts");
         let data = await response.json();
         let blogHTML = "";
-        for(let posts of data) {
+        for(let posts of data.reverse()) {
         let postDate = new Date(posts.date);
             blogHTML += `
                 <div>
