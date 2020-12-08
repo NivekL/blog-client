@@ -3,6 +3,26 @@ h1,h2,p,a {
     text-decoration: none;
     color: black;
 }
+
+body {
+    background-image: linear-gradient(to bottom right,rgb(238 112 240), rgb(95 218 231));
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container {
+   max-width: 960px;
+   margin: auto;
+   border-top: 1px solid;
+}
+
+#admin-btn {
+    align-self: flex-end;
+    margin-right: 100px;
+}
+
 .button {
     border: 1px solid black;
     border-radius: 3px;
@@ -27,19 +47,11 @@ a:hover {
     width: 500px;
 }
 
-body {
-    background-image: linear-gradient(to bottom right,rgb(238 112 240), rgb(95 218 231));
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#container {
-   max-width: 960px;
-   margin: auto;
-}
 
 div {
     border-bottom: 1px dashed black;
+}
+
+#read-more-link {
+    font-weight: bold;
 }
