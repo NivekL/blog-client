@@ -20,7 +20,7 @@ async function fetchTableData() {
                     <td>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</td>
                     <td>
                         <a href="update-post.html?id=${postData['_id']}">Update</a>
-                        <a href="#" class="delete-pun-btn" data-id="${postData['_id']}">Delete</a> 
+                        <a href="#" class="delete-post-btn" data-id="${postData['_id']}">Delete</a> 
                     </td>
                 </tr>
             `;
@@ -28,5 +28,31 @@ async function fetchTableData() {
         postTableData.innerHTML = postHTML;
     } catch(error) {
         throw new Error(error);
+    }
+
+    deletePostEvent();
+
+}
+
+// Delete post function 
+function deletePostEvent() {
+    let deleteBtns = document.getElementsByClassName('delete-post-btn');
+    for (let deleteBtn of deleteBtns) {
+        deleteBtn.addEventListener('click', async function(e) {
+            e.preventDefault()
+
+            let postId = this.dataset.id;
+            console.log(postId);
+            try {
+                await fetch('http://localhost:3000/posts' + postId, {
+                    method: 'DELETE'
+                });
+
+                // this.parentNode.parentNode.remove();
+            } catch (message) {
+                throw new Error(message);
+            }
+        
+        })
     }
 }
