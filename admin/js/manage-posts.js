@@ -44,11 +44,11 @@ function deletePostEvent() {
             let postId = this.dataset.id;
             console.log(postId);
             try {
-                await fetch('http://localhost:3000/posts' + postId, {
+                await fetch('http://localhost:3000/posts/' + postId, {
                     method: 'DELETE'
                 });
 
-                // this.parentNode.parentNode.remove();
+                this.parentNode.parentNode.remove();
             } catch (message) {
                 throw new Error(message);
             }
