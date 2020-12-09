@@ -5,10 +5,6 @@ async function createPost(e) {
     e.preventDefault();
 
     let formData = new FormData(this);
-    
-    console.log(formData.get('input-title'));
-    console.log(formData.get('input-author'));
-    console.log(formData.get('textarea-content'));
 
     let object = {
         tags: formData.getAll('tags'),
