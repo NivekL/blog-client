@@ -8,11 +8,13 @@
 </head>
 <body>
     <h1>Create Post</h1>
+    <span id="error-handler"></span>
     <form id="create-post-form">
         <input name="input-title" id="input-title" class="form-input-content" placeholder="Post title"></input>
         <input name="input-author" id="input-author" class="form-input-content" placeholder="Post author"></input>
         <textarea name="textarea-content" id="post-content" class="form-input-content" cols="50" rows="10" placeholder="Post content"></textarea>
         <select name="tags" id="post-tags" multiple>
+            <option id="default" selected>Select tags</option>
             <option value="History">History</option>
             <option value="Games">Games</option>
             <option value="Economics">Economics</option>
